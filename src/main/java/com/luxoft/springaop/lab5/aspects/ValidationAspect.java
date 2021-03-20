@@ -1,10 +1,10 @@
 package com.luxoft.springaop.lab5.aspects;
 
+import com.luxoft.springaop.lab5.exceptions.ValidationException;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import sun.security.validator.ValidatorException;
 
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public class ValidationAspect {
         Object[] methodArgs = joinPoint.getArgs();
         Integer age = (Integer)methodArgs[0];
         if (age>100){
-            throw new ValidatorException("Wrong age: " + age);
+            throw new ValidationException("Wrong age: " + age);
         }
     }
 

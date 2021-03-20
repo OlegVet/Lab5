@@ -33,6 +33,7 @@
 		<property name="codeName" value="RU" />
 	</bean>
 
+	<bean id="validationLoggingAspect" class="com.luxoft.springaop.lab5.aspects.ValidationLoggingAspect" />
 	<bean id="validationAspect" class="com.luxoft.springaop.lab5.aspects.ValidationAspect"/>
 
 </beans>
